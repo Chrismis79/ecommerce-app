@@ -2,8 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { addItem } from '../../redux/cart/cart.actions';
 
-import './collection-item.styles.scss';
-
 import {
     CollectionItemContainer,
     CollectionFooterContainer,
@@ -25,7 +23,7 @@ const CollectionItem = ({ item, addItem }) => {
             />
             <CollectionFooterContainer>
                 <NameContainer>{name}</NameContainer>
-                <PriceContainer>{price}</PriceContainer>
+                <PriceContainer>${price}</PriceContainer>
             </CollectionFooterContainer>
             <AddButton onClick={() => addItem(item)} inverted> Add to cart </AddButton>
         </CollectionItemContainer>
